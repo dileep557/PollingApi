@@ -5,6 +5,9 @@ const app=express();
 app.use(bodyParser.urlencoded({extended:true}))
 const db=require('./config/mongoose');
 
+// Routes
+app.use('/',require('./routes/index'));
+
 
    
 app.listen(Port,function(err){
